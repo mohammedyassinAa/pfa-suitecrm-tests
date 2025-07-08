@@ -1,4 +1,4 @@
-name: Playwright Tests CI
+name: Playwright POM Tests CI
 
 on:
   push:
@@ -13,29 +13,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: 📥 Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: 🟩 Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
 
-      - name: Install dependencies
-        run: npm ci
+      - name: 📦 Install dependencies
+        run: npm install
 
-      - name: Install Playwright Browsers
+      - name: 🛠 Install Playwright browsers
         run: npx playwright install --with-deps
 
-      - name: Run Playwright tests
+      - name: ▶️ Run Playwright POM tests
         run: npx playwright test
-        continue-on-error: true
 
-      - name: Upload Playwright HTML Report
+      - name: 📊 Upload Playwright report
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: playwright-report
           path: playwright-report/
-
-      - name: Complete job
-        run: echo "✅ Playwright tests executed and report uploaded. Review the report in the Artifacts section."
