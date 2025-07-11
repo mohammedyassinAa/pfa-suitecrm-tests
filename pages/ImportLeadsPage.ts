@@ -1,4 +1,4 @@
-import { Page, expect } from '@playwright/test';
+import { Page, expect , test } from '@playwright/test';
 import path from 'path';
 
 export class ImportLeadsPage {
@@ -68,5 +68,4 @@ export class ImportLeadsPage {
         const leadRow = this.page.locator(`table.list.view td a:has-text("${fullName}")`);
         await expect(leadRow.first()).toBeVisible({ timeout: 10000 });
     }
-
 }

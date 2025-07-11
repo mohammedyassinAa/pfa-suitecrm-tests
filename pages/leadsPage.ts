@@ -1,4 +1,4 @@
-import { Page, expect } from '@playwright/test';
+import { Page, expect , test } from '@playwright/test';
 
 export class LeadsPage {
 readonly page: Page;
@@ -46,4 +46,7 @@ async verifyLeadCreated(fullName: string) {
     await expect(this.page.locator('#full_name')).toHaveText(fullName, { timeout: 10000 });
 
 }
+
 }
+
+
