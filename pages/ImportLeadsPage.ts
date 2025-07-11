@@ -1,4 +1,4 @@
-import { Page, expect , test } from '@playwright/test';
+import { Page, expect  } from '@playwright/test';
 import path from 'path';
 
 export class ImportLeadsPage {
