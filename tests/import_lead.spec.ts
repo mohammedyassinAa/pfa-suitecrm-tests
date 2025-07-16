@@ -1,21 +1,23 @@
 import { test } from '@playwright/test';
-import { ImportLeadsPage } from '../pages/ImportLeadsPage';
 import { LoginPage } from '../pages/loginPage';
+import { ImportLeadPage } from '../pages/ImportLeadsPage';
+import { leadImportPath } from '../models/leadImportFile';
+import { adminUser } from '../models/userModel';
+import { expectedImportedLeadName } from '../models/leadImportFile';
 
-test('Import Leads in SuiteCRM', async ({ page }) => {
-    const loginPage = new LoginPage(page);
-    const importLeadsPage = new ImportLeadsPage(page);
 
-    await loginPage.goto();
-    await loginPage.login('admin', 'admin123'); // adapte le mot de passe si besoin
+test('Import leads from CSV into SuiteCRM', async ({ page }) => {
+  const loginPage = new LoginPage(page);
+  const importPage = new ImportLeadPage(page);
 
-   await  importLeadsPage.navigateToImportLeads()
-   await importLeadsPage.uploadCSVFile();
-   await importLeadsPage.mapFieldsAndImport();
-   await importLeadsPage.confirmDuplicatesAndImport();
-   await importLeadsPage.navigateToViewLeads();
+  await loginPage.goto();
+  await loginPage.login(adminUser.username, adminUser.password);
 
-   // Valider que le lead est présent
-   await importLeadsPage.verifyLeadImported('Mohammed yassine Aoulad ahriz');
+  await importPage.navigateToImportLeads();
+  await importPage.uploadCSVFile(leadImportPath);
+  await importPage.mapFieldsAndImport();
+  await importPage.confirmDuplicatesAndImport();
+  await importPage.navigateToViewLeads();
 
+  await importPage.verifyLeadImported(expectedImportedLeadName); // Replace with actual name from CSV
 });

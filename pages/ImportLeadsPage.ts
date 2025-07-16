@@ -1,68 +1,53 @@
-import { Page, expect  } from '@playwright/test';
-import path from 'path';
+import { expect, Page } from '@playwright/test';
+import { ImportLeadObjects } from '../objects/importLeadObjects';
 
-export class ImportLeadsPage {
-    readonly page: Page;
+export class ImportLeadPage {
+  readonly objects: ImportLeadObjects;
 
-    constructor(page: Page) {
-        this.page = page;
-    }
+  constructor(page: Page) {
+    this.objects = new ImportLeadObjects(page);
+  }
 
-    async navigateToImportLeads() {
-            const salesDropdown = this.page.locator('#grouptab_0');
-            await salesDropdown.click();
-            await this.page.getByRole('link', { name: 'Leads' }).click();
-            await this.page.waitForSelector('h2.module-title-text:has-text("Leads")', { timeout: 10000 });
-            await this.page.getByRole('link', { name: 'Import Leads' }).click();
-            await this.page.waitForSelector('text=STEP 1: UPLOAD IMPORT FILE', { timeout: 10000 });
-        
-    }
+  async navigateToImportLeads() {
+    await this.objects.salesDropdown.click();
+    await this.objects.leadsLink.click();
+    await this.objects.page.waitForSelector('h2.module-title-text:has-text("Leads")', { timeout: 10000 });
+    await this.objects.importLeadsLink.click();
+    await this.objects.page.waitForSelector('text=STEP 1: UPLOAD IMPORT FILE', { timeout: 10000 });
+  }
 
-    async uploadCSVFile() {
-        const filePath = path.resolve('C:\\Users\\hp\\Desktop\\test_leads_import_suitecrm.csv');
-        
+  async uploadCSVFile(filePath: string) {
+    await this.objects.fileInput.setInputFiles(filePath);
 
-        // Upload le fichier CSV
-        await this.page.waitForSelector('input[type="file"]', { timeout: 10000 });
-        const fileInput = this.page.locator('input[type="file"]');
-        await fileInput.setInputFiles(filePath);
-         // Préparer le handler AVANT le clic
-        this.page.once('dialog', async dialog => {
-            await dialog.accept();
-        });
-        // Choisir "Create new records and update existing records"
-        await this.page.locator('#import_update').check();
+    this.objects.page.once('dialog', async dialog => {
+      await dialog.accept();
+    });
 
-        // Cliquer sur NEXT
-        // await this.page.getByRole('button', { name: /Next/ }).click();
-        await this.page.getByRole('button', { name: 'NEXT >' }).click();
-        await this.page.locator('#gonext').click();
+    await this.objects.importUpdateCheckbox.check();
+    await this.objects.nextButton.click();
+    await this.objects.goNextButton.click();
+  }
 
-    }
+  async mapFieldsAndImport() {
+    await this.objects.emailSelect.waitFor();
+    await this.objects.addressSelect.waitFor();
+    await this.objects.emailSelect.selectOption('email1');
+    await this.objects.addressSelect.selectOption('jjwg_maps_address_c');
+    await this.objects.goNextButton.click();
+  }
 
-    async mapFieldsAndImport() {
-      // Attendre que les selects soient visibles
-      await this.page.waitForSelector('select[name="colnum_2"]', { timeout: 10000 });
-      await this.page.waitForSelector('select[name="colnum_3"]', { timeout: 10000 });
-  
-      // Mapper Email et Address via leur valeur exacte
-      await this.page.locator('select[name="colnum_2"]').selectOption('email1'); // Email
-      await this.page.locator('select[name="colnum_3"]').selectOption('jjwg_maps_address_c'); // Address
-  
-      // Cliquer sur Next deux fois (Step 3 puis Step 4)
-      await this.page.locator('#gonext').click();
-    }
+  async confirmDuplicatesAndImport() {
+    await this.objects.importNowButton.click();
+    await this.objects.page.waitForLoadState('networkidle');
+  }
 
-    async confirmDuplicatesAndImport() {
-        await this.page.locator('#importnow').click();
-        await this.page.waitForLoadState('networkidle');
-    }
-    async navigateToViewLeads() {
-        await this.page.click('#actionMenuSidebar > ul > li:nth-child(4) > a > div.actionmenulink'); 
-        await this.page.waitForSelector('h2.module-title-text:has-text("Leads")', { timeout: 10000 });
-    } 
-    async verifyLeadImported(fullName: string) {
-        const leadRow = this.page.locator(`table.list.view td a:has-text("${fullName}")`);
-        await expect(leadRow.first()).toBeVisible({ timeout: 10000 });
-    }
+  async navigateToViewLeads() {
+    await this.objects.viewLeadsLink.click();
+    await this.objects.page.waitForSelector('h2.module-title-text:has-text("Leads")', { timeout: 10000 });
+  }
+
+  async verifyLeadImported(fullName: string) {
+    const leadRow = this.objects.page.locator(`table.list.view td a:has-text("${fullName}")`);
+    await expect(leadRow.first()).toBeVisible({ timeout: 10000 });
+  }
 }
