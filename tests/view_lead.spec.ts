@@ -1,18 +1,15 @@
 import { test } from '@playwright/test';
-import { ViewLeadsPage } from '../pages/ViewLeadsPage';
 import { LoginPage } from '../pages/loginPage';
+import { ViewLeadsPage } from '../pages/viewLeadsPage';
+import { adminUser } from '../models/userModel';
 
-test('View Leads in SuiteCRM', async ({ page }) => {
-    const loginPage = new LoginPage(page);
-    const viewLeadsPage = new ViewLeadsPage(page);
+test('View leads and check lead presence', async ({ page }) => {
+  const loginPage = new LoginPage(page);
+  const viewLeadsPage = new ViewLeadsPage(page);
 
-    await loginPage.goto();
-    await loginPage.login('admin', 'admin123'); // adapte le mot de passe si besoin
+  await loginPage.goto();
+  await loginPage.login(adminUser.username, adminUser.password);
 
-   await  viewLeadsPage.navigateToViewLeads()
-   
-
-   // Valider que le lead est présent
-//    await viewLeadsPage.verifyLeadImported('Mohammed yassine Aoulad ahriz');
-
+  await viewLeadsPage.navigateToViewLeads();
+  await viewLeadsPage.verifyLeadVisible('Mohammed yassine Aoulad ahriz'); // Adjust to real lead name
 });
