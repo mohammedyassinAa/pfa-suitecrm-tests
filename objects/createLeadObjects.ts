@@ -13,6 +13,7 @@ export class CreateLeadObjects {
   readonly primaryEmailCheckbox: Locator;
   readonly saveButton: Locator;
   readonly fullNameLabel: Locator;
+  readonly fullusername: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -27,5 +28,6 @@ export class CreateLeadObjects {
     this.primaryEmailCheckbox = page.locator('input[name="email_primary"]');
     this.saveButton = page.locator('#SAVE').first();
     this.fullNameLabel = page.locator('#full_name');
+    this.fullusername= page .locator('#pagecontent > div.moduleTitle > h2');    
   }
 }

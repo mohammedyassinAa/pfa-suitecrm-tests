@@ -16,5 +16,7 @@ test('Create a new lead in SuiteCRM', async ({ page }) => {
   await leadPage.createLead(mockLead.firstName, mockLead.lastName, mockLead.phone, mockLead.email);
 
   const fullName = `${mockLead.firstName} ${mockLead.lastName}`;
+  await leadPage.LeadCreated();
   await leadPage.verifyLeadCreated(fullName);
+
 });

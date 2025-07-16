@@ -32,8 +32,10 @@ export class CreateLeadPage {
     await this.leadObjects.saveButton.click();
     await this.leadObjects.page.waitForLoadState('networkidle');
   }
-
-  async verifyLeadCreated(fullName: string) {
-    await expect(this.leadObjects.fullNameLabel).toHaveText(fullName, { timeout: 10000 });
+  async LeadCreated() {
+    await this.leadObjects.fullusername.isVisible()
+  }
+  async verifyLeadCreated(fullName: string , salutation : string = 'Mr.' ) {
+    await expect(this.leadObjects.fullNameLabel).toHaveText(`${salutation} ${fullName}`, { timeout: 10000 });
   }
 }
