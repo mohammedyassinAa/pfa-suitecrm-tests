@@ -9,13 +9,10 @@ export class ImportLeadsPage {
     }
 
     async navigateToImportLeads() {
-
             const salesDropdown = this.page.locator('#grouptab_0');
             await salesDropdown.click();
             await this.page.getByRole('link', { name: 'Leads' }).click();
-            // Wait for the Leads page to load
             await this.page.waitForSelector('h2.module-title-text:has-text("Leads")', { timeout: 10000 });
-            // await this.page.click('#actionMenuSidebar > ul > li:nth-child(4) > a'); 
             await this.page.getByRole('link', { name: 'Import Leads' }).click();
             await this.page.waitForSelector('text=STEP 1: UPLOAD IMPORT FILE', { timeout: 10000 });
         
@@ -61,7 +58,7 @@ export class ImportLeadsPage {
         await this.page.waitForLoadState('networkidle');
     }
     async navigateToViewLeads() {
-        await this.page.click('#actionMenuSidebar > ul > li:nth-child(4) > a > div.actionmenulink'); // View Leads
+        await this.page.click('#actionMenuSidebar > ul > li:nth-child(4) > a > div.actionmenulink'); 
         await this.page.waitForSelector('h2.module-title-text:has-text("Leads")', { timeout: 10000 });
     } 
     async verifyLeadImported(fullName: string) {

@@ -1,19 +1,20 @@
 import { Page } from '@playwright/test';
+import { LoginObjects } from '../objects/loginObjects';
 
 export class LoginPage {
-    readonly page: Page;
+  readonly loginObjects: LoginObjects;
 
-    constructor(page: Page) {
-        this.page = page;
-    }
+  constructor(page: Page) {
+    this.loginObjects = new LoginObjects(page);
+  }
 
-    async goto() {
-        await this.page.goto('http://localhost:18080/suitecrm');
-    }
+  async goto() {
+    await this.loginObjects.page.goto('http://localhost:18080/suitecrm'); // or your test URL
+  }
 
-    async login(username: string, password: string) {
-        await this.page.fill('input[name="user_name"]', username);
-        await this.page.fill('input[name="username_password"]', password);
-        await this.page.click('input[type="submit"]');
-    }
+  async login(username: string, user_password: string) {
+    await this.loginObjects.usernameInput.fill(username);
+    await this.loginObjects.passwordInput.fill(user_password);
+    await this.loginObjects.loginButton.click();
+  }
 }
