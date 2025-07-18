@@ -1,4 +1,4 @@
-import { ViewLeadsObjects } from '../objects/viewLeadsObjects';
+import { ViewLeadsObjects } from '../../objects/lead/viewLeadsObjects';
 import { expect } from '@playwright/test';
 
 export class ViewLeadsPage {

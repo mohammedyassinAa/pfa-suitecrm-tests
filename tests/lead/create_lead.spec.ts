@@ -1,8 +1,8 @@
 import { test } from '@playwright/test';
-import { CreateLeadPage } from '../pages/createLeadPage';
-import { mockLead } from '../models/leadModel';
-import { LoginPage } from '../pages/loginPage';
-import { adminUser } from '../models/userModel';
+import { CreateLeadPage } from '../../pages/lead/createLeadPage';
+import { mockLead } from '../../models/lead/leadModel';
+import { LoginPage } from '../../pages/loginPage';
+import { adminUser } from '../../models/userModel';
 
 test('Create a new lead in SuiteCRM', async ({ page }) => {
   const loginPage = new LoginPage(page);
