@@ -10,9 +10,9 @@ export class ImportLeadPage {
 
   async navigateToImportLeads() {
     await this.objects.salesDropdown.click();
-    await this.objects.leadsLink.click();
+    await this.objects.leadsLink.first().click();
     await this.objects.page.waitForSelector('h2.module-title-text:has-text("Leads")', { timeout: 10000 });
-    await this.objects.importLeadsLink.click();
+    await this.objects.importLeadsLink.first().click();
     await this.objects.page.waitForSelector('text=STEP 1: UPLOAD IMPORT FILE', { timeout: 10000 });
   }
 
@@ -37,6 +37,7 @@ export class ImportLeadPage {
   }
 
   async confirmDuplicatesAndImport() {
+    await this.objects.importNowButton.waitFor({ state: 'visible', timeout: 15000 });
     await this.objects.importNowButton.click();
     await this.objects.page.waitForLoadState('networkidle');
   }
