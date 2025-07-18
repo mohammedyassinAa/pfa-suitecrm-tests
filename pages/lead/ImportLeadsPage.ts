@@ -1,5 +1,5 @@
 import { expect, Page } from '@playwright/test';
-import { ImportLeadObjects } from '../objects/importLeadObjects';
+import { ImportLeadObjects } from '../../objects/lead/importLeadObjects';
 
 export class ImportLeadPage {
   readonly objects: ImportLeadObjects;
