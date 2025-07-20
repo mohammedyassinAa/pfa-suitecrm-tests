@@ -9,8 +9,7 @@ export class CreateAccountPage {
   }
 
   async navigateToCreateAccount() {
-    // Click "Sales" dropdown first if needed
-    await this.objects.salesDropdown.click(); // You’ll need to add this locator in objects file
+    await this.objects.salesDropdown.click(); 
     await this.objects.accountsTab.click();
     await this.objects.createAccountLink.click();
     await this.objects.createHeading.waitFor({ timeout: 10000 });
