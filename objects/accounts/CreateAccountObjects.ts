@@ -12,11 +12,10 @@ export class CreateAccountObjects {
   readonly salesDropdown: Locator;
 
   constructor(page: Page) {
-    this.salesDropdown = page.locator('#grouptab_0'); // Add this at the top
+    this.salesDropdown = page.locator('#grouptab_0'); 
     this.accountsTab = page.getByRole('link', { name: /Accounts/i });
     this.createAccountLink = page.getByRole('link', { name: /Create Account/i });
     this.createHeading = page.locator('h2.module-title-text:has-text("CREATE")');
-    // this.createHeading = page.getByRole('heading', { level: 2, name: 'CREATE' });
     this.nameInput = page.locator('input[name="name"]');
     this.websiteInput = page.locator('input[name="website"]');
     // BY id 

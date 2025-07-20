@@ -19,5 +19,5 @@ test('Import leads from CSV into SuiteCRM', async ({ page }) => {
   await importPage.confirmDuplicatesAndImport();
   await importPage.navigateToViewLeads();
 
-  await importPage.verifyLeadImported(expectedImportedLeadName); // Replace with actual name from CSV
+  await importPage.verifyLeadImported(expectedImportedLeadName); 
 });
