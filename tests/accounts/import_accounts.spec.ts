@@ -5,18 +5,18 @@ import { accountImportPath, expectedImportedAccountNames } from '../../models/ac
 import { adminUser } from '../../models/userModel';
 
 test('Import accounts from CSV into SuiteCRM', async ({ page }) => {
-  const loginPage = new LoginPage(page);
-  const importPage = new ImportAccountPage(page);
+    const loginPage = new LoginPage(page);
+    const importPage = new ImportAccountPage(page);
 
-  await loginPage.goto();
-  await loginPage.login(adminUser.username, adminUser.password);
+    await loginPage.goto();
+    await loginPage.login(adminUser.username, adminUser.password);
 
-  await importPage.navigateToImportAccounts();
-  await importPage.uploadCSVFile(accountImportPath);
-  await importPage.confirmProperties();
-  await importPage.confirmMappings();
-  await importPage.confirmAndImport();
-  await importPage.goToViewAccounts();
+    await importPage.navigateToImportAccounts();
+    await importPage.uploadCSVFile(accountImportPath);
+    await importPage.confirmProperties();
+    await importPage.confirmMappings();
+    await importPage.confirmAndImport();
+    await importPage.goToViewAccounts();
 
-  await importPage.verifyAccountImported(expectedImportedAccountNames);
+    await importPage.verifyAccountImported(expectedImportedAccountNames);
 });

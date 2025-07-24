@@ -1,23 +1,26 @@
 import { Locator, Page } from '@playwright/test';
 
 export class CreateContactObjects {
-  readonly salutationDropdown: Locator;
-  readonly firstNameInput: Locator;
-  readonly lastNameInput: Locator;
-  readonly officePhoneInput: Locator;
-  readonly mobileInput: Locator;
-  readonly jobTitleInput: Locator;
-  readonly departmentInput: Locator;
-  readonly faxInput: Locator;
-  readonly accountNameInput: Locator;
-  readonly emailInput: Locator;
-  readonly primaryAddressInput: Locator;
-  readonly otherAddressInput: Locator;
-  readonly saveButton: Locator;
-  readonly contactsTab: Locator;
-  readonly createContactLink: Locator;
+    readonly salutationDropdown: Locator;
+    readonly firstNameInput: Locator;
+    readonly lastNameInput: Locator;
+    readonly officePhoneInput: Locator;
+    readonly mobileInput: Locator;
+    readonly jobTitleInput: Locator;
+    readonly departmentInput: Locator;
+    readonly faxInput: Locator;
+    readonly accountNameInput: Locator;
+    readonly emailInput: Locator;
+    readonly primaryAddressInput: Locator;
+    readonly otherAddressInput: Locator;
+    readonly saveButton: Locator;
+    readonly contactsTab: Locator;
+    readonly createContactLink: Locator;
+    readonly salesDropdown: Locator;
+    readonly successMessage: Locator;
 
-  constructor(page: Page) {
+constructor(page: Page) {
+    this.salesDropdown = page.locator('#grouptab_0'); ;
     this.contactsTab = page.getByRole('link', { name: /Contacts/i });
     this.createContactLink = page.getByRole('link', { name: /Create Contact/i });
     this.salutationDropdown = page.locator('select[name="salutation"]');
@@ -29,9 +32,8 @@ export class CreateContactObjects {
     this.departmentInput = page.locator('input[name="department"]');
     this.faxInput = page.locator('input[name="phone_fax"]');
     this.accountNameInput = page.locator('input[name="account_name"]');
-    this.emailInput = page.locator('input[name="email1"]');
-    this.primaryAddressInput = page.locator('textarea[name="primary_address_street"]');
-    this.otherAddressInput = page.locator('textarea[name="alt_address_street"]');
+    this.emailInput = page.locator('input[name="Contacts0emailAddress0"]');
     this.saveButton = page.getByRole('button', { name: /Save/i });
-  }
+    this.successMessage = page.locator('h2.module-title-text');
+}
 }

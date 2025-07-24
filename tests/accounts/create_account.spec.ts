@@ -5,14 +5,14 @@ import { LoginPage } from '../../pages/loginPage';
 import { adminUser } from '../../models/userModel';
 
 test('Create a new account in SuiteCRM', async ({ page }) => {
-  const loginPage = new LoginPage(page);
-  const objects = new CreateAccountObjects(page);
-  const accountPage = new CreateAccountPage(objects);
+    const loginPage = new LoginPage(page);
+    const objects = new CreateAccountObjects(page);
+    const accountPage = new CreateAccountPage(objects);
 
-  await loginPage.goto();
-  await loginPage.login(adminUser.username, adminUser.password);
+    await loginPage.goto();
+    await loginPage.login(adminUser.username, adminUser.password);
 
-  await accountPage.navigateToCreateAccount();
-  await accountPage.fillAndSubmitForm('TestCorp Inc.', 'https://testcorp.com', 'contact@testcorp.com');
-  await accountPage.verifyAccountCreated('TestCorp Inc.');
+    await accountPage.navigateToCreateAccount();
+    await accountPage.fillAndSubmitForm('TestCorp Inc.', 'https://testcorp.com', 'contact@testcorp.com');
+    await accountPage.verifyAccountCreated('TestCorp Inc.');
 });
