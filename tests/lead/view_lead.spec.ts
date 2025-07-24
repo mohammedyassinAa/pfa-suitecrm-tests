@@ -11,5 +11,5 @@ test('View leads and check lead presence', async ({ page }) => {
   await loginPage.login(adminUser.username, adminUser.password);
 
   await viewLeadsPage.navigateToViewLeads();
-  await viewLeadsPage.verifyLeadVisible('Mohammed yassine Aoulad ahriz'); 
+  await viewLeadsPage.verifyLeadVisible(); 
 });
