@@ -3,17 +3,20 @@
 des comptes (Accounts) dans SuiteCRM.
 
 2 Réalisé avec succès le test de création d’un contact 
-(Contacts > Create Contact) en automatisant la saisie du formulaire et la vérification des données enregistrées.
+(Contacts > Create Contact) en automatisant la saisie du formulaire et la vérification 
+des données enregistrées,
+et l'importation d’un contact à partir d’un fichier vCard (.vcf)
 
 3 Organisé le projet en suivant l’architecture Page Object Model (POM),
  en séparant les objets, les pages, les modèles et les tests.
 
-4 Corrigé des erreurs liées à la sélection d’éléments ambigus (erreurs "strict mode violation") en ciblant précisément les bons sélecteurs.
+4 Corrigé des erreurs liées à la sélection d’éléments ambigus 
+(erreurs "strict mode violation") en ciblant précisément les bons sélecteurs.
 
 5 Validé le bon fonctionnement des tests (tous passent), puis poussé mes modifications sur GitHub
  dans des branches spécifiques (feature/accounts-tests, feature/contact-tests).
 
- 6  vCard (ou fichier .vcf) est un format standard de fichier pour l'échange de contacts électroniques. 
+ 6 vCard (ou fichier .vcf) est un format standard de fichier pour l'échange de contacts électroniques. 
 
 ---------------------------Qst 3 ------------------------------
 definition des selectors dans l objet 
