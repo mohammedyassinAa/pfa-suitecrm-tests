@@ -11,8 +11,6 @@ export class CreateContactObjects {
     readonly faxInput: Locator;
     readonly accountNameInput: Locator;
     readonly emailInput: Locator;
-    readonly primaryAddressInput: Locator;
-    readonly otherAddressInput: Locator;
     readonly saveButton: Locator;
     readonly contactsTab: Locator;
     readonly createContactLink: Locator;

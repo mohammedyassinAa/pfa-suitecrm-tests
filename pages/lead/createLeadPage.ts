@@ -1,10 +1,10 @@
-import { expect } from '@playwright/test';
+import { expect, Page } from '@playwright/test';
 import { CreateLeadObjects } from '../../objects/lead/createLeadObjects';
 
 export class CreateLeadPage {
   readonly leadObjects: CreateLeadObjects;
 
-  constructor(page) {
+  constructor(page : Page) {
     this.leadObjects = new CreateLeadObjects(page);
   }
 

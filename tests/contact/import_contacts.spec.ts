@@ -1,8 +1,8 @@
 import { test } from '@playwright/test';
 import { LoginPage } from '../../pages/loginPage';
 import { ImportContactPage } from '../../pages/contact/ImportContactPage';
-import { contactImportPath, expectedImportedContactFullName } from '../../models/contact/contactImportFile';
-import { adminUser } from '../../models/userModel';
+import { contactImportPath, expectedImportedContactFullName } from '.bin/models/contact/contactImportFile';
+import { adminUser } from '.bin/models/userModel';
 
 test('Import contacts from CSV into SuiteCRM', async ({ page }) => {
     const loginPage = new LoginPage(page);

@@ -5,7 +5,6 @@ export class ViewLeadsObjects {
   readonly salesDropdown: Locator;
   readonly leadsLink: Locator;
   readonly viewLeadsLink: Locator;
-  readonly leadsTableFirstRowNameCell: Locator;
   readonly tableRows: Locator;
   constructor(page: Page) {
     this.page = page;

@@ -1,10 +1,10 @@
 import { ViewContactsObjects } from '../../objects/contacts/ViewContactsObjects';
-import { expect } from '@playwright/test';
+import { expect, Page } from '@playwright/test';
 
 export class ViewContactPage {
     readonly objects: ViewContactsObjects;
 
-    constructor(page) {
+    constructor(page : Page) {
         this.objects = new ViewContactsObjects(page);
     }
 

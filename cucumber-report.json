@@ -1,0 +1,106 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "create-a-new-contact-in-suitecrm;user-creates-a-new-contact-successfully",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "User creates a new contact successfully",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2144642700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the user is logged in as an administrator",
+            "match": {
+              "location": "steps\\contact\\createContactSteps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4229126800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "the user navigates to the create contact page",
+            "match": {
+              "location": "steps\\contact\\createContactSteps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3209405799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "the user fills in the contact form",
+            "match": {
+              "location": "steps\\contact\\createContactSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1305956299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "submits the contact form",
+            "match": {
+              "location": "steps\\contact\\createContactSteps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 819899099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "the new contact should be created successfully",
+            "match": {
+              "location": "steps\\contact\\createContactSteps.ts:30"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5037224600,
+              "error_message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('h2.module-title-text')\nExpected string: \u001b[32m\"Mohammed yassine Aoulad ahriz\"\u001b[39m\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"to.have.text\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h2.module-title-text')\u001b[22m\n\n    at Proxy.<anonymous> (C:\\Users\\hp\\Desktop\\pfa-suitecrm-playwright\\node_modules\\playwright\\lib\\matchers\\expect.js:221:24)\n    at CreateContactPage.verifyContactCreated (C:\\Users\\hp\\Desktop\\pfa-suitecrm-playwright\\pages\\contact\\CreateContactPage.ts:38:51)\n    at CustomWorld.<anonymous> (C:\\Users\\hp\\Desktop\\pfa-suitecrm-playwright\\steps\\contact\\createContactSteps.ts:32:27)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 608100300
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "create-a-new-contact-in-suitecrm",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Create a new contact in SuiteCRM",
+    "tags": [],
+    "uri": "features\\Contact\\create_contact.feature"
+  }
+]

@@ -1,9 +1,9 @@
 import { test } from '@playwright/test';
 import { LoginPage } from '../../pages/loginPage';
 import { ImportLeadPage } from '../../pages/lead/ImportLeadsPage';
-import { leadImportPath } from '../../models/lead/leadImportFile';
-import { adminUser } from '../../models/userModel';
-import { expectedImportedLeadName } from '../../models/lead/leadImportFile';
+import { leadImportPath } from '.bin/models/lead/leadImportFile';
+import { adminUser } from '.bin/models/userModel';
+import { expectedImportedLeadName } from '.bin/models/lead/leadImportFile';
 
 
 test('Import leads from CSV into SuiteCRM', async ({ page }) => {

@@ -1,6 +1,6 @@
 import { Page, expect } from '@playwright/test';
 import { ImportVcardObjects } from '../../objects/contacts/ImportVcardObjects';
-import { vcardContact } from '../../models/contact/vcardModel';
+import { vcardContact } from '.bin/models/contact/vcardModel';
 
 export class ImportVcardPage {
     readonly page: Page;

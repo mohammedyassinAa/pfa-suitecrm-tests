@@ -1,7 +1,7 @@
 import { test } from '@playwright/test';
 import { LoginPage } from '../../pages/loginPage';
 import { ImportVcardPage } from '../../pages/contact/ImportVcardPage';
-import { adminUser } from '../../models/userModel';
+import { adminUser } from '.bin/models/userModel';
 
 test('Import contact using vCard in SuiteCRM', async ({ page }) => {
     const loginPage = new LoginPage(page);

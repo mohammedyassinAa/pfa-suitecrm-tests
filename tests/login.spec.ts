@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../pages/loginPage';
-import { adminUser } from '../models/userModel';
+import { adminUser } from '.bin/models/userModel';
 
 test('Login to SuiteCRM as admin', async ({ page }) => {
   const loginPage = new LoginPage(page);

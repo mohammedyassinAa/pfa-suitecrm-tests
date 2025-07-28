@@ -23,3 +23,6 @@ definition des selectors dans l objet
 supp modif
 cleaning database
 end to end test
+
+
+npm install --save-dev cucumber-html-reporter

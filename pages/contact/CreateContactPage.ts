@@ -1,6 +1,6 @@
 import { expect, Page } from '@playwright/test';
 import { CreateContactObjects } from '../../objects/contacts/CreateContactObjects';
-import { testContact } from '../../models/contact/contactModel';
+import { testContact } from '.bin/models/contact/contactModel';
 
 export class CreateContactPage {
     readonly page: Page;

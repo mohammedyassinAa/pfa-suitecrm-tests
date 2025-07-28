@@ -1,10 +1,10 @@
 import { ViewAccountsObjects } from '../../objects/accounts/ViewAccountsObjects';
-import { expect } from '@playwright/test';
+import { expect, Page } from '@playwright/test';
 
 export class ViewAccountsPage {
     readonly objects: ViewAccountsObjects;
 
-    constructor(page) {
+    constructor(page : Page) {
         this.objects = new ViewAccountsObjects(page);
     }
 
