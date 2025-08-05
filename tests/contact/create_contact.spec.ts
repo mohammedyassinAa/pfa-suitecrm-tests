@@ -1,9 +1,8 @@
 import { test } from '@playwright/test';
 import { CreateContactPage } from '../../pages/contact/CreateContactPage';
 import { LoginPage } from '../../pages/loginPage';
-import { adminUser } from '.bin/models/userModel';
+import { adminUser } from '../../models/userModel';
 test('Create contact successfully in SuiteCRM', async ({ page }) => {
-  // Go to the login page and login first if needed
     const loginPage = new LoginPage(page);
     const contactPage = new CreateContactPage(page);
 

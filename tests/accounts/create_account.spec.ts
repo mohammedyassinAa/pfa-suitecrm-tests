@@ -2,7 +2,7 @@ import { test } from '@playwright/test';
 import { CreateAccountPage } from '../../pages/accounts/CreateAccountPage';
 import { CreateAccountObjects } from '../../objects/accounts/CreateAccountObjects';
 import { LoginPage } from '../../pages/loginPage';
-import { adminUser } from '.bin/models/userModel';
+import { adminUser } from '../../models/userModel';
 
 test('Create a new account in SuiteCRM', async ({ page }) => {
     const loginPage = new LoginPage(page);

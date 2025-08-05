@@ -1,7 +1,7 @@
 import { Given } from '@cucumber/cucumber';
-import { LoginPage } from '../../pages/loginPage';
-import { adminUser } from '../../models/userModel';
-import { CustomWorld } from '../../support/hooks';
+import { LoginPage } from '../pages/loginPage';
+import { adminUser } from '../models/userModel';
+import { CustomWorld } from '../support/hooks';
 
 let loginPage: LoginPage;
 

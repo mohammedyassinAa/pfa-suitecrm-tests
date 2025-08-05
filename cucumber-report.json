@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "import-contact-from-vcard;user-imports-a-contact-using-a-vcard-file",
+        "id": "view-accounts;user-views-the-list-of-accounts",
         "keyword": "Scenario",
         "line": 3,
-        "name": "User imports a contact using a vCard file",
+        "name": "User views the list of accounts",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1525336299
+              "duration": 1994173499
             }
           },
           {
@@ -23,50 +23,37 @@
             "line": 4,
             "name": "the user is logged in as an administrator",
             "match": {
-              "location": "steps\\contact\\commonSteps.ts:8"
+              "location": "steps\\login.ts:8"
             },
             "result": {
               "status": "passed",
-              "duration": 3880364400
+              "duration": 2954348500
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 5,
-            "name": "the user navigates to the import vCard page",
+            "name": "the user navigates to the view accounts page",
             "match": {
-              "location": "steps\\contact\\importVcardSteps.ts:7"
+              "location": "steps\\account\\viewAccountSteps.ts:7"
             },
             "result": {
               "status": "passed",
-              "duration": 3909486300
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 6,
-            "name": "the user uploads a vCard file",
-            "match": {
-              "location": "steps\\contact\\importVcardSteps.ts:12"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3503834899
+              "duration": 2939599199
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 7,
-            "name": "the new contact should be imported successfully",
+            "line": 6,
+            "name": "the list of accounts should be visible",
             "match": {
-              "location": "steps\\contact\\importVcardSteps.ts:16"
+              "location": "steps\\account\\viewAccountSteps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 588565699
+              "duration": 31983199
             }
           },
           {
@@ -74,7 +61,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1518400000
+              "duration": 750642400
             }
           }
         ],
@@ -82,11 +69,11 @@
         "type": "scenario"
       }
     ],
-    "id": "import-contact-from-vcard",
+    "id": "view-accounts",
     "line": 1,
     "keyword": "Feature",
-    "name": "Import Contact from vCard",
+    "name": "View Accounts",
     "tags": [],
-    "uri": "features\\Contact\\import_vcard.feature"
+    "uri": "features\\account\\view_account.feature"
   }
 ]

@@ -1,7 +1,7 @@
 import { test } from '@playwright/test';
 import { LoginPage } from '../../pages/loginPage';
 import { ViewContactPage } from '../../pages/contact/ViewContactPage';
-import { adminUser } from '.bin/models/userModel';
+import { adminUser } from '../../models/userModel';
 
 test('View existing contacts in SuiteCRM', async ({ page }) => {
     const loginPage = new LoginPage(page);
