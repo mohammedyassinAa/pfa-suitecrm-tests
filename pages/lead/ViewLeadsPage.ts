@@ -1,10 +1,10 @@
 import { ViewLeadsObjects } from '../../objects/lead/viewLeadsObjects';
-import { expect } from '@playwright/test';
+import { expect , Page } from '@playwright/test';
 
 export class ViewLeadsPage {
   readonly objects: ViewLeadsObjects;
 
-  constructor(page) {
+  constructor(page : Page) {
     this.objects = new ViewLeadsObjects(page);
   }
 

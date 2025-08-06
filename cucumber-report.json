@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "view-accounts;user-views-the-list-of-accounts",
+        "id": "view-leads;user-views-the-list-of-leads",
         "keyword": "Scenario",
         "line": 3,
-        "name": "User views the list of accounts",
+        "name": "User views the list of leads",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1994173499
+              "duration": 1116126800
             }
           },
           {
@@ -27,33 +27,33 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2954348500
+              "duration": 3341853100
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 5,
-            "name": "the user navigates to the view accounts page",
+            "name": "the user navigates to the view leads page",
             "match": {
-              "location": "steps\\account\\viewAccountSteps.ts:7"
+              "location": "steps\\lead\\viewLeadSteps.ts:7"
             },
             "result": {
               "status": "passed",
-              "duration": 2939599199
+              "duration": 3894231799
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 6,
-            "name": "the list of accounts should be visible",
+            "name": "the list of leads should be visible",
             "match": {
-              "location": "steps\\account\\viewAccountSteps.ts:12"
+              "location": "steps\\lead\\viewLeadSteps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 31983199
+              "duration": 43054799
             }
           },
           {
@@ -61,7 +61,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 750642400
+              "duration": 1406867000
             }
           }
         ],
@@ -69,11 +69,11 @@
         "type": "scenario"
       }
     ],
-    "id": "view-accounts",
+    "id": "view-leads",
     "line": 1,
     "keyword": "Feature",
-    "name": "View Accounts",
+    "name": "View Leads",
     "tags": [],
-    "uri": "features\\account\\view_account.feature"
+    "uri": "features\\lead\\view_lead.feature"
   }
 ]
