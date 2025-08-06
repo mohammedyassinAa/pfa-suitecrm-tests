@@ -36,7 +36,6 @@ export class CreateContactPage {
 
     async verifyContactCreated(name : string) {
         await expect(this.objects.successMessage).toContainText(name);
-
     }
     
 }

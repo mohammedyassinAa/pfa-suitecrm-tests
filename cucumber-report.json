@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "view-leads;user-views-the-list-of-leads",
+        "id": "create-opportunity;user-creates-a-new-opportunity-successfully",
         "keyword": "Scenario",
         "line": 3,
-        "name": "User views the list of leads",
+        "name": "User creates a new opportunity successfully",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1116126800
+              "duration": 1148716399
             }
           },
           {
@@ -27,33 +27,59 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3341853100
+              "duration": 2753791900
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 5,
-            "name": "the user navigates to the view leads page",
+            "name": "the user navigates to the opportunities module",
             "match": {
-              "location": "steps\\lead\\viewLeadSteps.ts:7"
+              "location": "steps\\opportunities\\createOpportunitySteps.ts:8"
             },
             "result": {
               "status": "passed",
-              "duration": 3894231799
+              "duration": 1953650400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "clicks on create opportunity",
+            "match": {
+              "location": "steps\\opportunities\\createOpportunitySteps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1294622400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "the user fills out the opportunity creation form",
+            "match": {
+              "location": "steps\\opportunities\\createOpportunitySteps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17150242600
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 6,
-            "name": "the list of leads should be visible",
+            "line": 8,
+            "name": "the new opportunity should be created successfully",
             "match": {
-              "location": "steps\\lead\\viewLeadSteps.ts:12"
+              "location": "steps\\opportunities\\createOpportunitySteps.ts:21"
             },
             "result": {
               "status": "passed",
-              "duration": 43054799
+              "duration": 386571599
             }
           },
           {
@@ -61,7 +87,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1406867000
+              "duration": 941208499
             }
           }
         ],
@@ -69,11 +95,11 @@
         "type": "scenario"
       }
     ],
-    "id": "view-leads",
+    "id": "create-opportunity",
     "line": 1,
     "keyword": "Feature",
-    "name": "View Leads",
+    "name": "Create Opportunity",
     "tags": [],
-    "uri": "features\\lead\\view_lead.feature"
+    "uri": "features\\opportunity\\create_opportunity.feature"
   }
 ]

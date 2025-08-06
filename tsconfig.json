@@ -17,5 +17,7 @@
     "features",
     "steps",
     "support"
-  ]
+,
+"pages/loginPage.ts"
+]
 }
