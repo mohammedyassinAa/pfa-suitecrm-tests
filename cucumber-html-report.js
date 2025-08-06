@@ -1,4 +1,3 @@
-// cucumber-html-report.js
 import reporter from 'cucumber-html-reporter';
 
 const options = {
@@ -8,7 +7,7 @@ const options = {
     reportSuiteAsScenarios: true,
     launchReport: true,
     metadata: {
-        "Project": "SuiteCRM PFA",
+        "Project": "SuiteCRM Playwright Tests",
         "Platform": "Windows",
         "Executed": "Local"
     }
