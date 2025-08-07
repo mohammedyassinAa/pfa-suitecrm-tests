@@ -6,23 +6,23 @@ let browser: Browser;
 let context: BrowserContext;
 
 export class CustomWorld extends World {
-  page!: Page;
+    page!: Page;
 
-  constructor(options: IWorldOptions) {
-    super(options);
-  }
-}
-setDefaultTimeout(20000);
-setWorldConstructor(CustomWorld);
+    constructor(options: IWorldOptions) {
+        super(options);
+    }
+    }
+    setDefaultTimeout(20000);
+    setWorldConstructor(CustomWorld);
 
-Before(async function (this: CustomWorld) {
-  browser = await chromium.launch({ headless: false });
-  context = await browser.newContext();
-  this.page = await context.newPage();
-});
+    Before(async function (this: CustomWorld) {
+        browser = await chromium.launch({ headless: false });
+        context = await browser.newContext();
+        this.page = await context.newPage();
+    });
 
-After(async function () {
-  await context.close();
-  await browser.close();
-});
+    After(async function () {
+        await context.close();
+        await browser.close();
+    });
 

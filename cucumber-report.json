@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "import-opportunities;import-a-new-opportunity-from-csv",
+        "id": "view-leads;user-views-the-list-of-leads",
         "keyword": "Scenario",
         "line": 3,
-        "name": "Import a new opportunity from CSV",
+        "name": "User views the list of leads",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1287529699
+              "duration": 2125328400
             }
           },
           {
@@ -27,72 +27,33 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3471364599
+              "duration": 17470236699
             }
           },
           {
             "arguments": [],
-            "keyword": "When ",
+            "keyword": "And ",
             "line": 5,
-            "name": "the user navigates to the import opportunities page",
+            "name": "the user navigates to the view opportunities page",
             "match": {
-              "location": "steps\\opportunities\\importOppurtunitySreps.ts:9"
+              "location": "steps\\opportunities\\viewOpportunitiesSteps.ts:7"
             },
             "result": {
               "status": "passed",
-              "duration": 5130024100
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 6,
-            "name": "the user uploads a valid opportunity CSV file",
-            "match": {
-              "location": "steps\\opportunities\\importOppurtunitySreps.ts:14"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2104418799
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 7,
-            "name": "maps the opportunity fields and proceeds",
-            "match": {
-              "location": "steps\\opportunities\\importOppurtunitySreps.ts:18"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1876992400
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 8,
-            "name": "confirms the import process",
-            "match": {
-              "location": "steps\\opportunities\\importOppurtunitySreps.ts:22"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2003275499
+              "duration": 7965586999
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 9,
-            "name": "the imported opportunity should appear in the list",
+            "line": 6,
+            "name": "the list of opportunities should be visible",
             "match": {
-              "location": "steps\\opportunities\\importOppurtunitySreps.ts:26"
+              "location": "steps\\opportunities\\viewOpportunitiesSteps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 2144473500
+              "duration": 42562600
             }
           },
           {
@@ -100,7 +61,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1043800500
+              "duration": 691059400
             }
           }
         ],
@@ -108,11 +69,11 @@
         "type": "scenario"
       }
     ],
-    "id": "import-opportunities",
+    "id": "view-leads",
     "line": 1,
     "keyword": "Feature",
-    "name": "Import Opportunities",
+    "name": "View Leads",
     "tags": [],
-    "uri": "features\\opportunity\\import_opportunity.feature"
+    "uri": "features\\opportunity\\view_opportunity.feature"
   }
 ]
