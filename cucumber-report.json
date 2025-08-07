@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "create-opportunity;user-creates-a-new-opportunity-successfully",
+        "id": "import-opportunities;import-a-new-opportunity-from-csv",
         "keyword": "Scenario",
         "line": 3,
-        "name": "User creates a new opportunity successfully",
+        "name": "Import a new opportunity from CSV",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1148716399
+              "duration": 1287529699
             }
           },
           {
@@ -27,59 +27,72 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2753791900
+              "duration": 3471364599
             }
           },
           {
             "arguments": [],
-            "keyword": "And ",
+            "keyword": "When ",
             "line": 5,
-            "name": "the user navigates to the opportunities module",
+            "name": "the user navigates to the import opportunities page",
             "match": {
-              "location": "steps\\opportunities\\createOpportunitySteps.ts:8"
+              "location": "steps\\opportunities\\importOppurtunitySreps.ts:9"
             },
             "result": {
               "status": "passed",
-              "duration": 1953650400
+              "duration": 5130024100
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 6,
-            "name": "clicks on create opportunity",
+            "name": "the user uploads a valid opportunity CSV file",
             "match": {
-              "location": "steps\\opportunities\\createOpportunitySteps.ts:13"
+              "location": "steps\\opportunities\\importOppurtunitySreps.ts:14"
             },
             "result": {
               "status": "passed",
-              "duration": 1294622400
+              "duration": 2104418799
             }
           },
           {
             "arguments": [],
-            "keyword": "When ",
+            "keyword": "And ",
             "line": 7,
-            "name": "the user fills out the opportunity creation form",
+            "name": "maps the opportunity fields and proceeds",
             "match": {
-              "location": "steps\\opportunities\\createOpportunitySteps.ts:17"
+              "location": "steps\\opportunities\\importOppurtunitySreps.ts:18"
             },
             "result": {
               "status": "passed",
-              "duration": 17150242600
+              "duration": 1876992400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "confirms the import process",
+            "match": {
+              "location": "steps\\opportunities\\importOppurtunitySreps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2003275499
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 8,
-            "name": "the new opportunity should be created successfully",
+            "line": 9,
+            "name": "the imported opportunity should appear in the list",
             "match": {
-              "location": "steps\\opportunities\\createOpportunitySteps.ts:21"
+              "location": "steps\\opportunities\\importOppurtunitySreps.ts:26"
             },
             "result": {
               "status": "passed",
-              "duration": 386571599
+              "duration": 2144473500
             }
           },
           {
@@ -87,7 +100,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 941208499
+              "duration": 1043800500
             }
           }
         ],
@@ -95,11 +108,11 @@
         "type": "scenario"
       }
     ],
-    "id": "create-opportunity",
+    "id": "import-opportunities",
     "line": 1,
     "keyword": "Feature",
-    "name": "Create Opportunity",
+    "name": "Import Opportunities",
     "tags": [],
-    "uri": "features\\opportunity\\create_opportunity.feature"
+    "uri": "features\\opportunity\\import_opportunity.feature"
   }
 ]

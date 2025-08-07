@@ -11,13 +11,13 @@ Given('the user navigates to the opportunities module', async function (this: Cu
 });
 
 Given('clicks on create opportunity', async function () {
-  await createOpportunityPage.clickCreateOpportunity();
+    await createOpportunityPage.clickCreateOpportunity();
 });
 
 When('the user fills out the opportunity creation form', async function () {
-  await createOpportunityPage.fillOpportunityForm(testOpportunity);
+    await createOpportunityPage.fillOpportunityForm(testOpportunity);
 });
 
 Then('the new opportunity should be created successfully', async function () {
-  await createOpportunityPage.verifyOpportunityCreated(testOpportunity.name);
+    await createOpportunityPage.verifyOpportunityCreated(testOpportunity.name);
 });
