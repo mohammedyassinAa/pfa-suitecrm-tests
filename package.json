@@ -7,6 +7,11 @@
     "lint": "eslint .",
     "test": "playwright test",
     "test:bdd": "npx cucumber-js --require-module ts-node/register --require support/hooks.ts --require steps/**/*.ts --format json:cucumber-report.json",
+    "test:account": "npx cucumber-js features/account --require-module ts-node/register --require support/hooks.ts --require steps/**/*.ts --format json:cucumber-report.json",
+    "test:contact": "npx cucumber-js features/contact --require-module ts-node/register --require support/hooks.ts --require steps/**/*.ts --format json:cucumber-report.json",
+    "test:lead": "npx cucumber-js features/lead --require-module ts-node/register --require support/hooks.ts --require steps/**/*.ts --format json:cucumber-report.json",
+    "test:opportunity": "npx cucumber-js features/opportunity --require-module ts-node/register --require support/hooks.ts --require steps/**/*.ts --format json:cucumber-report.json",
+    "inject:tags": "node tag-injector.js",
     "generate:report": "node cucumber-html-report.js",
     "test:feature": "npm run test:bdd --",
     "test:debug": "npx cucumber-js --require-module ts-node/register --require support/hooks.ts --require steps/**/*.ts features/**/*.feature --format @cucumber/pretty-formatter --publish-quiet"

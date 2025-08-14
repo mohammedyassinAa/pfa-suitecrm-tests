@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "view-leads;user-views-the-list-of-leads",
+        "id": "create-lead;user-creates-a-new-lead-successfully",
         "keyword": "Scenario",
         "line": 3,
-        "name": "User views the list of leads",
+        "name": "User creates a new lead successfully",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 2125328400
+              "duration": 1007024800
             }
           },
           {
@@ -27,33 +27,59 @@
             },
             "result": {
               "status": "passed",
-              "duration": 17470236699
+              "duration": 3449647399
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 5,
-            "name": "the user navigates to the view opportunities page",
+            "name": "the user navigates to the leads module",
             "match": {
-              "location": "steps\\opportunities\\viewOpportunitiesSteps.ts:7"
+              "location": "steps\\lead\\createLeadSteps.ts:8"
             },
             "result": {
               "status": "passed",
-              "duration": 7965586999
+              "duration": 5383896000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "clicks on create lead",
+            "match": {
+              "location": "steps\\lead\\createLeadSteps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 334752399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "the user fills out the lead creation form",
+            "match": {
+              "location": "steps\\lead\\createLeadSteps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8823941599
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 6,
-            "name": "the list of opportunities should be visible",
+            "line": 8,
+            "name": "the new lead should be created successfully",
             "match": {
-              "location": "steps\\opportunities\\viewOpportunitiesSteps.ts:12"
+              "location": "steps\\lead\\createLeadSteps.ts:22"
             },
             "result": {
               "status": "passed",
-              "duration": 42562600
+              "duration": 5974100200
             }
           },
           {
@@ -61,11 +87,219 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 691059400
+              "duration": 1081954099
             }
           }
         ],
-        "tags": [],
+        "tags": [
+          {
+            "name": "@lead",
+            "line": 2
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "create-lead",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Create Lead",
+    "tags": [],
+    "uri": "features\\lead\\create_lead.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "import-lead;user-successfully-imports-a-lead-from-a-csv-file",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "User successfully imports a lead from a CSV file",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1501419300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the user is logged in as an administrator",
+            "match": {
+              "location": "steps\\login.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3248977800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "the user navigates to the import leads page",
+            "match": {
+              "location": "steps\\lead\\importLeadSteps.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5103587800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "the user uploads a valid leads CSV file",
+            "match": {
+              "location": "steps\\lead\\importLeadSteps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1465487500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "maps the lead fields and continues",
+            "match": {
+              "location": "steps\\lead\\importLeadSteps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 826756499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "confirms and imports the leads",
+            "match": {
+              "location": "steps\\lead\\importLeadSteps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3405970500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "the new lead should appear in the lead list",
+            "match": {
+              "location": "steps\\lead\\importLeadSteps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12067600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 382498800
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@lead",
+            "line": 2
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "import-lead",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Import Lead",
+    "tags": [],
+    "uri": "features\\lead\\import_lead.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "view-leads;user-views-the-list-of-leads",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "User views the list of leads",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 835725699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the user is logged in as an administrator",
+            "match": {
+              "location": "steps\\login.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2458250199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "the user navigates to the view leads page",
+            "match": {
+              "location": "steps\\lead\\viewLeadSteps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2898077599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "the list of leads should be visible",
+            "match": {
+              "location": "steps\\lead\\viewLeadSteps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14267399
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 396656899
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@lead",
+            "line": 2
+          }
+        ],
         "type": "scenario"
       }
     ],
@@ -74,6 +308,6 @@
     "keyword": "Feature",
     "name": "View Leads",
     "tags": [],
-    "uri": "features\\opportunity\\view_opportunity.feature"
+    "uri": "features\\lead\\view_lead.feature"
   }
 ]
