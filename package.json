@@ -11,6 +11,7 @@
     "test:contact": "npx cucumber-js features/contact --require-module ts-node/register --require support/hooks.ts --require steps/**/*.ts --format json:cucumber-report.json",
     "test:lead": "npx cucumber-js features/lead --require-module ts-node/register --require support/hooks.ts --require steps/**/*.ts --format json:cucumber-report.json",
     "test:opportunity": "npx cucumber-js features/opportunity --require-module ts-node/register --require support/hooks.ts --require steps/**/*.ts --format json:cucumber-report.json",
+    "test:lead:unhappy": "npx cucumber-js features/lead/unhappy --require-module ts-node/register --require support/hooks.ts --require steps/**/*.ts --format json:cucumber-report.json ",
     "inject:tags": "node tag-injector.js",
     "generate:report": "node cucumber-html-report.js",
     "test:feature": "npm run test:bdd --",

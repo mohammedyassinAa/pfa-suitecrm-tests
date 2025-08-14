@@ -13,6 +13,7 @@ export class ImportLeadObjects {
   readonly addressSelect: Locator;
   readonly importNowButton: Locator;
   readonly viewLeadsLink: Locator;
+  readonly errMsg: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -27,5 +28,8 @@ export class ImportLeadObjects {
     this.addressSelect = page.locator('select[name="colnum_3"]');
     this.importNowButton = page.locator('#importnow');
     this.viewLeadsLink = page.locator('#actionMenuSidebar > ul > li:nth-child(4) > a > div.actionmenulink');
+    this.errMsg = page.locator('span:has-text("rows were not imported due to error")');
+      
+    
   }
 }
