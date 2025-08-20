@@ -10,7 +10,6 @@ export class ViewLeadsObjects {
   readonly searchButton: Locator;
   readonly noResultsMessage: Locator;
   readonly noLeadsMessage: Locator;
-
   constructor(page: Page) {
     this.page = page;
     this.salesDropdown = page.locator('#grouptab_0');
@@ -21,6 +20,5 @@ export class ViewLeadsObjects {
     this.searchButton = page.locator('input#search_form_submit');
     this.noResultsMessage = page.locator('table.list.view tbody tr td:has-text("No results found")'); 
     this.noLeadsMessage = page.locator('div.listViewEmpty');
-
   }
 }

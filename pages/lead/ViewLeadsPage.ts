@@ -10,7 +10,7 @@ export class ViewLeadsPage {
 
     async navigateToViewLeads() {
       await this.objects.salesDropdown.click();
-      await this.objects.leadsLink.click();
+      await this.objects.leadsLink.first().click();
       await this.objects.viewLeadsLink.click();
     }
 
