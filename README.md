@@ -1,4 +1,4 @@
-# PFA SuiteCRM Automated Tests
+# SuiteCRM Automated Tests
 
 ## 🌟 Objectif
 

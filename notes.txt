@@ -1,0 +1,83 @@
+---------------------------WEEK 3 ------------------------------
+1 tests Playwright pour la création et l’importation et la vue 
+des comptes (Accounts) dans SuiteCRM.
+
+2 Réalisé avec succès le test de création d’un contact 
+(Contacts > Create Contact) en automatisant la saisie du formulaire et la vérification 
+des données enregistrées,
+et l'importation d’un contact à partir d’un fichier vCard (.vcf)
+
+3 Organisé le projet en suivant l’architecture Page Object Model (POM),
+ en séparant les objets, les pages, les modèles et les tests.
+
+4 Corrigé des erreurs liées à la sélection d’éléments ambigus 
+(erreurs "strict mode violation") en ciblant précisément les bons sélecteurs.
+
+5 Validé le bon fonctionnement des tests (tous passent), puis poussé mes modifications sur GitHub
+ dans des branches spécifiques (feature/accounts-tests, feature/contact-tests).
+
+ 6 vCard (ou fichier .vcf) est un format standard de fichier pour l'échange de contacts électroniques. 
+
+---------------------------Qst 3 ------------------------------
+definition des selectors dans l objet 
+supp modif
+
+end to end test
+
+
+npm install --save-dev cucumber-html-reporter
+
+🚀 Missions réalisées
+
+Automatisation des tests fonctionnels de SuiteCRM
+
+Mise en place d’une architecture Page Object Model (POM).
+
+Utilisation de Playwright pour automatiser les tests.
+
+Tests sur différents modules de SuiteCRM
+
+Leads : création, importation, consultation, gestion des doublons.
+
+Contacts : création, importation (CSV et vCard), consultation.
+
+Comptes (Accounts) : création, importation, affichage.
+
+Opportunités (Opportunities) : création (avec gestion des champs auto-complétés), importation, consultation.
+
+Calendrier & Activités : création et affectation de tâches, gestion des dates.
+
+Scénarios de tests avancés
+
+Intégration de Cucumber (BDD) avec Playwright pour écrire des scénarios en langage naturel (Given/When/Then).
+
+Mise en place de scénarios Happy Path (flux nominal) et Unhappy Path (gestion des erreurs).
+
+Tests de bout en bout (E2E) regroupant création, import et visualisation d’entités.
+
+Intégration et collaboration
+
+Présentation de ton travail à ton mentor et au test manager de l’entreprise.
+
+Préparation d’une présentation professionnelle comparant Playwright et Selenium (car l’entreprise utilise encore Selenium).
+
+Résultats
+
+Mise en place d’une suite de tests automatisés réutilisable et évolutive.
+
+Gain en fiabilité et rapidité des tests par rapport aux tests manuels.
+
+Démonstration de la valeur ajoutée de Playwright pour l’entreprise.
+
+Situation: During my current internship, I was assigned to automate testing in SuiteCRM, a tool I had never used before.
+Task: I had to quickly understand the platform and deliver automated test cases using Playwright within a short timeframe.
+Action: I studied the official documentation, followed tutorials, and broke down the project into smaller tasks. I also collaborated with my mentor to validate my approach.
+Result: Within two weeks, I was able to build working automation scripts using Playwright and later extended them to multiple CRM modules. This not only improved my technical skills but also reduced manual testing time for the team.
+     
+cd C:\xampp\apache\bin
+httpd.exe
+
+
+bullet points enlever 
+oaragraphiser 
+mnshrahsy chnu kdeeml lhaja 

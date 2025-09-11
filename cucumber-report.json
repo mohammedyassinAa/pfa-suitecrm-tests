@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "end-to-end-lead-management;create,-import,-and-view-a-lead",
+        "id": "unhappy-path---create-lead;submit-lead-form-without-last-name",
         "keyword": "Scenario",
         "line": 4,
-        "name": "Create, import, and view a lead",
+        "name": "Submit lead form without last name",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1151342800
+              "duration": 1317500200
             }
           },
           {
@@ -27,12 +27,12 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2630130999
+              "duration": 4095126499
             }
           },
           {
             "arguments": [],
-            "keyword": "When ",
+            "keyword": "And ",
             "line": 6,
             "name": "the user navigates to the leads module",
             "match": {
@@ -40,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2893419500
+              "duration": 4335851800
             }
           },
           {
@@ -53,124 +53,33 @@
             },
             "result": {
               "status": "passed",
-              "duration": 57281399
+              "duration": 121754799
             }
           },
           {
             "arguments": [],
-            "keyword": "And ",
+            "keyword": "When ",
             "line": 8,
-            "name": "the user fills out the lead creation form",
+            "name": "the user submits the lead form without filling the last name",
             "match": {
-              "location": "steps\\lead\\createLeadSteps.ts:17"
+              "location": "steps\\lead\\unhappy\\leadUnhappySteps.ts:14"
             },
             "result": {
               "status": "passed",
-              "duration": 9397338700
+              "duration": 1243976099
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 9,
-            "name": "the new lead should be created successfully",
+            "name": "an error message \"Missing required field: Last Name\" should be displayed under the \"Last Name\" field",
             "match": {
-              "location": "steps\\lead\\createLeadSteps.ts:22"
+              "location": "steps\\lead\\unhappy\\leadUnhappySteps.ts:21"
             },
             "result": {
               "status": "passed",
-              "duration": 35052600
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 10,
-            "name": "the user navigates to the import leads page",
-            "match": {
-              "location": "steps\\lead\\importLeadSteps.ts:8"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 8223875700
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 11,
-            "name": "the user uploads a valid leads CSV file",
-            "match": {
-              "location": "steps\\lead\\importLeadSteps.ts:13"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3695520499
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 12,
-            "name": "maps the lead fields and continues",
-            "match": {
-              "location": "steps\\lead\\importLeadSteps.ts:17"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1264944999
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 13,
-            "name": "confirms and imports the leads",
-            "match": {
-              "location": "steps\\lead\\importLeadSteps.ts:21"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 4478798399
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 14,
-            "name": "the new lead should appear in the lead list",
-            "match": {
-              "location": "steps\\lead\\importLeadSteps.ts:26"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 14272799
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 15,
-            "name": "the user navigates to the view leads page",
-            "match": {
-              "location": "steps\\lead\\viewLeadSteps.ts:7"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 5748448199
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 16,
-            "name": "the list of leads should be visible",
-            "match": {
-              "location": "steps\\lead\\viewLeadSteps.ts:12"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 18258099
+              "duration": 43048699
             }
           },
           {
@@ -178,7 +87,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1244444100
+              "duration": 1270717599
             }
           }
         ],
@@ -188,18 +97,204 @@
             "line": 3
           },
           {
-            "name": "@e2e",
+            "name": "@lead_unhappy",
             "line": 3
           }
         ],
         "type": "scenario"
       }
     ],
-    "id": "end-to-end-lead-management",
+    "id": "unhappy-path---create-lead",
     "line": 1,
     "keyword": "Feature",
-    "name": "End-to-End Lead Management",
+    "name": "Unhappy path - Create Lead",
     "tags": [],
-    "uri": "features\\lead\\e2e\\lead_e2e.feature"
+    "uri": "features\\lead\\unhappy\\create_lead_unhappy.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "unhappy-path---import-lead;import-lead-with-missing-last-name-in-csv",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Import lead with missing last name in CSV",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1579779900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "the user is logged in as an administrator",
+            "match": {
+              "location": "steps\\login.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3423828900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "the user navigates to the import leads page",
+            "match": {
+              "location": "steps\\lead\\importLeadSteps.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6486317300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "the user uploads a malformed lead CSV with missing last name",
+            "match": {
+              "location": "steps\\lead\\unhappy\\leadUnhappySteps.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3889934399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "an error message \"rows were not imported due to error\" should be displayed",
+            "match": {
+              "location": "steps\\lead\\unhappy\\leadUnhappySteps.ts:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4830620600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 800342300
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@lead",
+            "line": 3
+          },
+          {
+            "name": "@lead_unhappy",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "unhappy-path---import-lead",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Unhappy path - Import Lead",
+    "tags": [],
+    "uri": "features\\lead\\unhappy\\import_lead_unhappy.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "unhappy-path---view-lead;view-leads-when-none-exist",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "View leads when none exist",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1565039000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "the user is logged in as an administrator",
+            "match": {
+              "location": "steps\\login.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3729105799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "the user navigates to the view leads page",
+            "match": {
+              "location": "steps\\lead\\viewLeadSteps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4702263999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "a message \"You currently have no records saved.\" should be displayed",
+            "match": {
+              "location": "steps\\lead\\unhappy\\leadUnhappySteps.ts:40"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5011243399,
+              "error_message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('div.listViewEmpty')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"to.be.visible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div.listViewEmpty')\u001b[22m\n\n    at Proxy.<anonymous> (C:\\Users\\hp\\Desktop\\pfa-suitecrm-playwright\\node_modules\\playwright\\lib\\matchers\\expect.js:221:24)\n    at ViewLeadsPage.verifyNoLeadsMessage (C:\\Users\\hp\\Desktop\\pfa-suitecrm-playwright\\pages\\lead\\ViewLeadsPage.ts:22:49)\n    at CustomWorld.<anonymous> (C:\\Users\\hp\\Desktop\\pfa-suitecrm-playwright\\steps\\lead\\unhappy\\leadUnhappySteps.ts:42:25)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 859852100
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@lead",
+            "line": 3
+          },
+          {
+            "name": "@lead_unhappy",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "unhappy-path---view-lead",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Unhappy path - View Lead",
+    "tags": [],
+    "uri": "features\\lead\\unhappy\\view_lead_unhappy.feature"
   }
 ]
