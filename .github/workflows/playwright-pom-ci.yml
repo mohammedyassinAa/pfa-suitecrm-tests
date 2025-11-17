@@ -13,19 +13,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 📥 Checkout repository
+      - name:  Checkout repository
         uses: actions/checkout@v4
 
-      - name: 🟩 Setup Node.js
+      - name:  Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
 
-      - name: 📦 Install dependencies
+      - name:  Install dependencies
         run: npm install
 
-      - name: 🧹 Run linter
+      - name:  Run linter
         run: npm run lint
 
-      - name: 🛠 Check build (optional)
+      - name:  Check build (optional)
         run: npm run build
